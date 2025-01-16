@@ -1,0 +1,143 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Styles */
+.menu {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.menu li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.menu li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Main Content Styles */
+main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.post {
+  border-radius: 12px; /* Larger border radius */
+  padding: 3rem; /* Increased padding */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 400px; /* Increased from 300px */
+  max-width: 100%;
+  min-height: 300px; /* Minimum height */
+}
+
+.post.featured {
+  flex: 1 1 100%;
+  border-left: 4px solid #007bff;
+  margin: 15px;
+}
+
+.post h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.post .content {
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .posts {
+    flex-direction: column;
+  }
+
+  .post {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .post {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+/* Hover Effects */
+.post {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Additional Responsive Adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .post {
+    padding: 1.5rem;
+  }
+}
