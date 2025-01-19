@@ -65,6 +65,7 @@
       let linkCollection = document.getElementsByTagName("a");
       for (let element of linkCollection) {
         let addres = element.getAttribute("href");
+        console.log(addres);
         if (addres.includes("http")) {
           element.textContent += "↗";
         }
